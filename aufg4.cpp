@@ -7,12 +7,13 @@ int main()
 {
 	const int start = 10000000;
 	const int end = 10000500;
+	bool isPrime;
 	
 	cout << "Primzahlen zwischen " << start << " und " << end << ":" << endl;
 	
 	for ( int u=start; u<end; ++u )
 	{
-		bool isPrime = true;
+		isPrime = true;
 		
 		for ( int i=2; i <= floor( double(u) / 2. ); ++i )
 		{
