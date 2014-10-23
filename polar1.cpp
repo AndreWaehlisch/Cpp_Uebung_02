@@ -4,7 +4,7 @@ using namespace std;
 
 void polar2cartesian(const double r, const double phi)
 {
-	// Intervall korrigieren
+	// Intervall korrigieren. Ach ja?
 	double phi_corrected = phi;
 	
 	if ( fabs(phi) > 360 )
