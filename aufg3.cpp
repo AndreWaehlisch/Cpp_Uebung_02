@@ -14,13 +14,14 @@ void potenzreihe(const double x, double& y1, double& y2)
 	y2 = 0; 
 
 	for ( int i=0; i<12; i++ )
-	  {
-	    if( i%2 ) 
-	      y1 += power_x * *(p1++);
-	    else 
-	      y2 += power_x * *(p2++); 
-	    power_x *= x;
-	  }
+	{
+		if ( i%2 )
+		  y1 += power_x * *(p1++);
+		else
+		  y2 += power_x * *(p2++);
+
+		power_x *= x;
+	}
 }
 
 int main()
@@ -31,7 +32,7 @@ int main()
 	cout << "Bitte x Wert angeben: ";
 	cin >> input;
 	
-	potenzreihe( input, y1, y2); 
+	potenzreihe(input, y1, y2); 
 
 	// berechne f1(x) und sin(x)
 	cout << "f_1(" << input << ") = " << y1 << endl;
