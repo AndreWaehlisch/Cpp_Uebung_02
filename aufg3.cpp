@@ -4,7 +4,8 @@ using namespace std;
 
 void potenzreihe(const double x, double& y1, double& y2)
 {
-        const double f1[6] = {  1, -1./6., 1./120., -1./5040., 1./362880., -1./39916800. };
+	// Koeffizienten der Entwicklung
+	const double f1[6] = { 1, -1./6., 1./120., -1./5040., 1./362880., -1./39916800. };
 	const double f2[6] = { 1, -1./2., 1./24., -1./720., 1./40320., -1./3628800.};
 	const double *p1 = f1, *p2 = f2; 
 	double power_x = 1; 
@@ -24,8 +25,6 @@ void potenzreihe(const double x, double& y1, double& y2)
 
 int main()
 {
-	// Koeffizienten der Entwicklung
-	
 	double input;
 	double y1,y2; 
 	
