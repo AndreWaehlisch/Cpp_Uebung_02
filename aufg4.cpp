@@ -15,7 +15,7 @@ int main()
 	{
 		isPrime = true;
 		
-		for ( int i=2; i <= floor( double(u) / 2. ); ++i )
+		for ( int i=2; i <= u/2 ; ++i )
 		{
 			if ( !(u % i) )
 			{

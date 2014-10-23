@@ -4,17 +4,17 @@ using namespace std;
 
 void polar2cartesian(const double r, const double phi)
 {
-	// Intervall korrigieren. Ach ja?
+	// Intervall korrigieren.
 	double phi_corrected = phi;
+
+	const double aux1 = 360; 
+	const double aux2 = 180;
 	
-	if ( fabs(phi) > 360 )
-		phi_corrected = fmod(phi_corrected, 360);
-	
-	if ( phi < 0 )
-		phi_corrected += 360;
+	if ( fabs(phi) > aux1 )
+		phi_corrected = fmod(phi_corrected, aux1);
 	
 	// Phi zu Radian konvertieren
-	phi_corrected *= (M_PI / 180.);
+	phi_corrected *= (M_PI / aux2);
 	
 	// Eigentlich Berechnung und Ausgabe
 	cout << "Ergebnis x = " << r * cos(phi_corrected) << endl;
