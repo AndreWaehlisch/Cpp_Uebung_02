@@ -13,7 +13,7 @@ void polar2cartesian(const double r, const double phi)
 	// Phi zu Radian konvertieren
 	phi_corrected *= (M_PI / 180.);
 	
-	// Eigentlich Berechnung und Ausgabe
+	// Eigentliche Berechnung und Ausgabe
 	cout << "Ergebnis x = " << r * cos(phi_corrected) << endl;
 	cout << "Ergebnis y = " << r * sin(phi_corrected) << endl;
 	
